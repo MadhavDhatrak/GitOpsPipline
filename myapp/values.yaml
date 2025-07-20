@@ -1,0 +1,30 @@
+# Default values for GitOps Project
+# This is a YAML-formatted file.
+
+frontend:
+  replicaCount: 1
+  image:
+    repository: madhavdhatrak/gitops-frontend
+    tag: latest
+    pullPolicy: Always
+  service:
+    type: NodePort
+    port: 5173
+    targetPort: 5173
+    nodePort: 30000
+  config:
+    apiUrl: http://backend-service:5000
+
+backend:
+  replicaCount: 1
+  image:
+    repository: madhavdhatrak/gitops-backend
+    tag: latest
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    port: 5000
+    targetPort: 5000
+  config:
+    port: 5000
+  
