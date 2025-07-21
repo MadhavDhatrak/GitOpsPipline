@@ -25,3 +25,9 @@ spec:
                 name: backend-config
             - secretRef:
                 name: backend-secret      
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secret
+                  key: mongodbUri
