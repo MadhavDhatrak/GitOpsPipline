@@ -48,10 +48,10 @@ jobs:
 
       - name: Commit and push chart change
         run: |
-          git config user.email "actions@github.com"
-          git config user.name  "GitHub Actions"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add myapp/values.yaml
           git commit -m "chore: update image tags to ${{ steps.vars.outputs.TAG }}"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
