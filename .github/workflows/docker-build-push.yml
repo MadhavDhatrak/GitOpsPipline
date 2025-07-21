@@ -43,8 +43,8 @@ jobs:
 
       - name: Bump image tags in Helm chart
         run: |
-          yq -i '.frontend.image.tag = "${{ steps.vars.outputs.TAG }}"'  myapp/values.yaml
-          yq -i '.backend.image.tag  = "${{ steps.vars.outputs.TAG }}"'  myapp/values.yaml
+          yq -i -y '.frontend.image.tag = "${{ steps.vars.outputs.TAG }}"'  myapp/values.yaml
+          yq -i -y '.backend.image.tag  = "${{ steps.vars.outputs.TAG }}"'  myapp/values.yaml
 
       - name: Commit and push chart change
         run: |
