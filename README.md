@@ -13,7 +13,7 @@ This repository contains a GitOps-based deployment setup for a full-stack applic
 
 ## Prerequisites
 
-- Docker and Docker Compose
+- Docker
 - Kubernetes cluster (local or remote)
 - Helm
 - ArgoCD
