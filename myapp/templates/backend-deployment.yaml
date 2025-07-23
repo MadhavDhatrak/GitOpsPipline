@@ -36,10 +36,10 @@ spec:
                 secretKeyRef:
                   name: backend-secret
                   key: jwtSecret
-            - name: JWT_EXPIRATION
+            - name: JWT_EXPIRES_IN
               valueFrom:
                 secretKeyRef:
                   name: backend-secret
-                  key: jwtExpirationIn
+                  key: jwtExpiresIn
           
          
