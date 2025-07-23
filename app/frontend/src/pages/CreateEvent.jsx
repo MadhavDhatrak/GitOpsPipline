@@ -189,7 +189,7 @@ function CreateEvent() {
         console.log(pair[0] + ': ' + pair[1]);
       }
 
-      const response = await axios.post('http://localhost:5000/api/events', eventFormData, {
+      const response = await axios.post('/events', eventFormData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

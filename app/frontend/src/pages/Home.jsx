@@ -128,7 +128,7 @@ function Home() {
   const fetchEvents = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/events', {
+      const response = await axios.get('/events', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEvents(response.data.data);
@@ -140,7 +140,7 @@ function Home() {
   const handleSearch = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5000/api/events/search?query=${searchQuery}`, {
+      const response = await axios.get(`/events/search?query=${searchQuery}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEvents(response.data.data);
@@ -514,7 +514,7 @@ function Home() {
                     <CardMedia
                       component="img"
                       height="200"
-                      image={event.image ? `http://localhost:5000${event.image}` : categoryImages[event.category] || 'https://source.unsplash.com/random?event'}
+                      image={event.image ? `${import.meta.env.VITE_API_URL.replace('/api', '')}${event.image}` : categoryImages[event.category] || 'https://source.unsplash.com/random?event'}
                       alt={event.title}
                       sx={{ objectFit: 'cover' }}
                     />

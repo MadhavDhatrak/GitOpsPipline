@@ -51,7 +51,7 @@ function Dashboard() {
         // Get user profile data
         let profileData = null;
         try {
-          const profileResponse = await axios.get('http://localhost:5000/api/auth/profile', {
+          const profileResponse = await axios.get('/auth/profile', {
             headers: { Authorization: `Bearer ${token}` }
           });
           profileData = profileResponse.data.data;
@@ -63,7 +63,7 @@ function Dashboard() {
 
         // Get dashboard events
         try {
-          const dashboardResponse = await axios.get('http://localhost:5000/api/events/dashboard', {
+          const dashboardResponse = await axios.get('/events/dashboard', {
             headers: { Authorization: `Bearer ${token}` }
           });
           setEvents(dashboardResponse.data.data);
@@ -103,7 +103,7 @@ function Dashboard() {
   };
 
   const getEventImage = (event) => {
-    if (event.image) return `http://localhost:5000${event.image}`;
+    if (event.image) return `${import.meta.env.VITE_API_URL.replace('/api', '')}${event.image}`;
     
     const categoryImages = {
       academic: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3',

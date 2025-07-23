@@ -109,9 +109,9 @@ function EventDetails() {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5000/api/events/${id}`, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
+      const response = await axios.get(`/events/${id}`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
       setEvent(response.data.data);
       setError('');
     } catch (error) {
@@ -135,10 +135,10 @@ function EventDetails() {
       }
       
       await axios.post(
-        `http://localhost:5000/api/events/${id}/register`,
-        {},
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+          `/events/${id}/register`,
+          {},
+          { headers: { Authorization: `Bearer ${token}` } }
+        );
       setSuccess('Successfully registered for the event!');
       // Refresh event details after successful registration
       await fetchEventDetails();
@@ -266,7 +266,7 @@ function EventDetails() {
       <EventContainer>
         <EventImage>
           <img
-            src={event.image ? `http://localhost:5000${event.image}` : 'https://source.unsplash.com/random?event'}
+            src={event.image ? `${import.meta.env.VITE_API_URL.replace('/api', '')}${event.image}` : 'https://source.unsplash.com/random?event'}
             alt={event.title}
             style={{
               width: '100%',
