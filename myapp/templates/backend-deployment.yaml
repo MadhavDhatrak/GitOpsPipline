@@ -31,3 +31,15 @@ spec:
                 secretKeyRef:
                   name: backend-secret
                   key: mongodbUri
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secret
+                  key: jwtSecret
+            - name: JWT_EXPIRATION
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secret
+                  key: jwtExpirationIn
+          
+         
