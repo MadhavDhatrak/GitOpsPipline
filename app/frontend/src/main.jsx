@@ -4,7 +4,7 @@ import App from './App';
 import axios from 'axios';
 
 // Configure axios defaults
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api');
 axios.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {

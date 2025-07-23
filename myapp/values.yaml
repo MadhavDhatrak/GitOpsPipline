@@ -10,7 +10,7 @@ frontend:
     targetPort: 5173
     nodePort: 30000
   config:
-    apiUrl: http://backend-service:5000/api
+    apiUrl: /api
 backend:
   replicaCount: 1
   image:

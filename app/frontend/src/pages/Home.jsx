@@ -514,7 +514,7 @@ function Home() {
                     <CardMedia
                       component="img"
                       height="200"
-                      image={event.image ? `${import.meta.env.VITE_API_URL.replace('/api', '')}${event.image}` : categoryImages[event.category] || 'https://source.unsplash.com/random?event'}
+                      image={event.image ? `${(import.meta.env.VITE_API_URL || '').replace('/api', '')}${event.image}` : categoryImages[event.category] || 'https://source.unsplash.com/random?event'}
                       alt={event.title}
                       sx={{ objectFit: 'cover' }}
                     />

@@ -266,7 +266,7 @@ function EventDetails() {
       <EventContainer>
         <EventImage>
           <img
-            src={event.image ? `${import.meta.env.VITE_API_URL.replace('/api', '')}${event.image}` : 'https://source.unsplash.com/random?event'}
+            src={event.image ? `${(import.meta.env.VITE_API_URL || '').replace('/api', '')}${event.image}` : 'https://source.unsplash.com/random?event'}
             alt={event.title}
             style={{
               width: '100%',
