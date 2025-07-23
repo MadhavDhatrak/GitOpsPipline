@@ -622,7 +622,7 @@ function Home() {
           <Grid container spacing={6}>
             <Grid item xs={12} sm={4}>
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
-                About MatoshriBuddy
+                About The MatoshriBuddy
               </Typography>
               <Typography variant="body2" sx={{ mb: 2, opacity: 0.8 }}>
                 Your one-stop platform for discovering and participating in college events.
