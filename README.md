@@ -19,18 +19,23 @@ This project demonstrates how to implement GitOps principles to achieve consiste
 
 ## Project Structure
 ```
-app/ # Application source code
-├─ frontend/ # React frontend application
-└─ backend/ # Node.js backend application
+.
+├── .github/                  # GitHub-specific configurations
+│   └── workflows/            # CI/CD pipeline definitions (build, test, deploy)
+│
+├── app/                      # Application source code
+│   ├── frontend/             # React frontend application
+│   └── backend/              # Node.js backend application
+│
+├── myapp/                    # Helm chart for Kubernetes deployment
+│   ├── Chart.yaml            # Helm chart metadata
+│   ├── values.yaml           # Default configuration values
+│   └── templates/            # Kubernetes manifests (Deployments, Services, etc.)
+│
+├── docker-compose.yaml       # Local development setup
+├── README.md                 # Project documentation
+└── LICENSE                   # License information
 
-myapp/ # Helm chart for Kubernetes deployment
-├─ Chart.yaml # Helm chart metadata
-├─ values.yaml # Helm chart default configuration
-└─ templates/ # Kubernetes manifests templates (Deployments, Services, etc.)
-
-gitops/ # ArgoCD configuration for GitOps deployment
-
-.github/workflows/ # CI/CD pipeline definitions (build, test, deploy)
 ```
 
 ## Prerequisites
