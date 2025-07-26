@@ -72,7 +72,7 @@ helm install myapp ./myapp
 
 ### GitOps Deployment with ArgoCD
 
-- The `gitops/` directory contains ArgoCD application manifests that connect your Kubernetes cluster with the Git repository.
+- The application was created using the ArgoCD UI.
 - ArgoCD automatically syncs cluster state with the Git repo, providing continuous deployment and rollback capabilities.
 - Secrets are securely stored using Sealed Secrets; encrypted secrets are stored in Git safely.
 
