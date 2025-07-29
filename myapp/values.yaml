@@ -2,7 +2,7 @@ frontend:
   replicaCount: 1
   image:
     repository: madhavdhatrak/gitops-frontend
-    tag: 4ff1a7d
+    tag: e5088d9
     pullPolicy: Always
   service:
     type: NodePort
@@ -15,7 +15,7 @@ backend:
   replicaCount: 1
   image:
     repository: madhavdhatrak/gitops-backend
-    tag: 4ff1a7d
+    tag: e5088d9
     pullPolicy: Always
   service:
     type: ClusterIP
