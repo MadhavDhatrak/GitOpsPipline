@@ -101,6 +101,3 @@ The `.github/workflows/` directory contains GitHub Actions workflows that:
 | `kubectl -n argocd get applications` | Check ArgoCD application status   |
 | `kubectl get sealedsecrets`     | List sealed secrets in cluster     |
 
-## Contributing
-
-Contributions are welcome! Please create pull requests with clear descriptions for any improvements or fixes.
