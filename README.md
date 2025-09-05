@@ -10,7 +10,7 @@ This repository contains a **GitOps-based deployment setup** for a full-stack ap
 
 ## Project Overview
 
-This project demonstrates how to implement GitOps principles to achieve consistent, automated, and declarative deployments of a full-stack web application.
+This project demonstrates how to implement GitOps principles to achieve consistent, automated, and declarative deployments of a full-stack web application
 
 - **Frontend:** React.js application
 - **Backend:** Node.js REST API
